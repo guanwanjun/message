@@ -12,7 +12,7 @@ msgSchema.statics = {
   findAll: function(cb) {
     return this
       .find({})
-      .sort("createAt")
+      .sort({createAt: -1})
       .exec(cb);
   },
   findById: function(id, cb) {

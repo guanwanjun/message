@@ -10,9 +10,9 @@
 {% block content %}
 <script src="/javascripts/message.js"></script>
 
-<ul>
+<ul class="list-group">
   {% for msg in msgs %}
-  <li>
+  <li class="list-group-item">
     <div>
       内容：{{msg.content}}
     </div>

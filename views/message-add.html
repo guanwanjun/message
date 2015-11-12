@@ -8,8 +8,12 @@
 
 {% block content %}
 <form action="/message/insert" method="POST">
-  <textarea name="content" cols="30" rows="10"></textarea>
-  <input type="submit" value="添加">
+  <div class="input-group">
+    <input type="text" class="form-control" name="content" placeholder="input message" value="">
+    <span class="input-group-btn">
+      <input class="btn btn-default" type="submit" value="添加">
+    </span>
+  </div>
 </form>
 <a href="/message/list">查看留言</a>
 {% endblock %}
