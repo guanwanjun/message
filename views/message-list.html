@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}Message List{% endblock %}
+
+{% block head %}
+{% parent %}<!--此处的意思为引用layout的head里的内容-->
+<script src="/javascripts/message.js"></script>
+{% endblock %}
+
+{% block content %}
+<script src="/javascripts/message.js"></script>
+
+<ul>
+  {% for msg in msgs %}
+  <li>
+    <div>
+      内容：{{msg.content}}
+    </div>
+    <div>发布时间：{{ msg.createAt|date("Y-m-d H:i:s", -8*60) }}</div>
+    <div>操作：<a class="js-upd" href="/message/edit/{{msg._id + ''}}">编辑</a>&nbsp;&nbsp;<a class="js-del" href="javascript:;" data-id="{{msg._id + ''}}">删除</a></div>
+  </li>
+  {% endfor %}
+</ul>
+<a href="/message/add">添加留言</a>
+{% endblock %}

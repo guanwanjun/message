@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block title %}Message Add{% endblock %}
+
+{% block head %}
+{% parent %}<!--此处的意思为引用layout的head里的内容-->
+{% endblock %}
+
+{% block content %}
+欢迎来到留言区，点击<a href="/message/add">此处</a>留言
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}Message{% endblock %}
+
+{% block head %}
+{% parent %}<!--此处的意思为引用layout的head里的内容-->
+{% endblock %}
+
+{% block content %}
+<form action="/message/update" method="POST">
+  <textarea name="content" cols="30" rows="10">{{msg.content}}</textarea>
+  <input type="hidden" name="id" value="{{msg.id}}">
+  <input type="submit" value="编辑">
+</form>
+<a href="/message/list">查看留言</a>
+{% endblock %}
