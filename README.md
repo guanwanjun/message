@@ -1,2 +1,2 @@
 # message
-一个基于nodejs+express+swig的超级简单留言板
+一个基于node+express+swig的简单留言板
